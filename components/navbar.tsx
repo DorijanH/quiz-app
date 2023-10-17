@@ -20,7 +20,7 @@ export default async function Navbar() {
         {/* Logo */}
         <Link href="/">
           <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl font-bold transition-all hover:-translate-y-0.5 dark:border-white">
-            Quiz App
+            QuizApp
           </p>
         </Link>
 

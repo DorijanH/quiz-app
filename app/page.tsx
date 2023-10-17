@@ -21,7 +21,7 @@ export default async function Home() {
     <div className="flex min-h-full flex-col items-center justify-center">
       <Card className="w-[300px]">
         <CardHeader>
-          <CardTitle>Welcome to Quiz App!</CardTitle>
+          <CardTitle>Welcome to QuizApp!</CardTitle>
 
           <CardDescription>
             This is a quiz app that allows you to create and share quizzes with your friends.
