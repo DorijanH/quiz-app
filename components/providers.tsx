@@ -1,5 +1,6 @@
 'use client';
 
+import { ThemeProvider } from 'next-themes';
 import { SessionProvider } from 'next-auth/react';
 
 type ProvidersProps = {
@@ -14,7 +15,14 @@ type ProvidersProps = {
 export default function Providers({ children }: ProvidersProps) {
   return (
     <SessionProvider>
-      {children}
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        storageKey="quz-app-theme"
+      >
+        {children}
+      </ThemeProvider>
     </SessionProvider>
   );
 }

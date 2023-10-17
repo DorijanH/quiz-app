@@ -4,6 +4,7 @@ import { getAuthSession } from '@/lib/nextauth';
 
 import UserButton from './user-button';
 import SignInButton from './sign-in-button';
+import ModeToggle from './mode-toggle';
 
 type NavbarProps = {
 
@@ -27,12 +28,16 @@ export default async function Navbar(props: NavbarProps) {
           </p>
         </Link>
 
-        <div className="flex items-center">
-          {session?.user ? (
-            <UserButton user={session.user} />
-          ) : (
-            <SignInButton text="Sign In" />
-          )}
+        <div className="flex items-center gap-x-4">
+          <ModeToggle />
+
+          <div className="flex items-center">
+            {session?.user ? (
+              <UserButton user={session.user} />
+            ) : (
+              <SignInButton text="Sign In" />
+            )}
+          </div>
         </div>
       </div>
     </div>
