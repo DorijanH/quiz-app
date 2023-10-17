@@ -1,4 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import CustomWordCloud from '@/components/custom-word-cloud';
 
 type HotTopicsCardProps = {}
 
@@ -18,8 +19,8 @@ export default function HotTopicsCard(props: HotTopicsCardProps) {
         </CardDescription>
       </CardHeader>
 
-      <CardContent>
-        Word cloud
+      <CardContent className="pl-2">
+        <CustomWordCloud />
       </CardContent>
     </Card>
   );
