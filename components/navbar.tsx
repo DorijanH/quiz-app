@@ -6,16 +6,12 @@ import UserButton from './user-button';
 import SignInButton from './sign-in-button';
 import ModeToggle from './mode-toggle';
 
-type NavbarProps = {
-
-};
-
 /**
  * Function representing the Navbar component.
  *
  * @returns Navbar component
  */
-export default async function Navbar(props: NavbarProps) {
+export default async function Navbar() {
   const session = await getAuthSession();
 
   return (
